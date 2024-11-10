@@ -1,0 +1,101 @@
+<div class="content">
+    <h3>{{title}}</h3>
+    <div class="table-controle-ponto">
+
+        <div class="table-top-bar">
+            <div class="buttons">
+                <button class="btn btn-gerar excel">Gerar Excel</button>
+                <button class="btn btn-gerar pdf">Gerar PDF</button>
+            </div>
+
+            <input class="form-control input-search" type="text" name="search" id="search" placeholder="Pesquisar...">
+        </div>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Nome do Colaborador</th>
+                <th scope="col">Departamento</th>
+                <th scope="col">Horario do Ponto</th>
+                <th scope="col">Status</th>
+                <th scope="col">Opções</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">Matheus Gomes da Silva</td>
+                <td>Desenvolvimento</td>
+                <td>08/11/2024 09:30</td>
+                <td>Almoço</td>
+                <td><button class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#modalEditarTable"> Editar</button></td>
+              </tr>
+
+              <tr>
+                <td scope="row">Matheus Gomes da Silva</td>
+                <td>Desenvolvimento</td>
+                <td>08/11/2024 09:30</td>
+                <td>Almoço</td>
+                <td><button class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#modalEditarTable"> Editar</button></td>
+              </tr>
+
+              <tr>
+                <td scope="row">Matheus Gomes da Silva</td>
+                <td>Desenvolvimento</td>
+                <td>08/11/2024 09:30</td>
+                <td>Almoço</td>
+                <td><button class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#modalEditarTable"> Editar</button></td>
+              </tr>
+
+              <tr>
+                <td scope="row">Matheus Gomes da Silva</td>
+                <td>Desenvolvimento</td>
+                <td>08/11/2024 09:30</td>
+                <td>Almoço</td>
+                <td><button class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#modalEditarTable"> Editar</button></td>
+              </tr>
+
+              <tr>
+                <td scope="row">Matheus Gomes da Silva</td>
+                <td>Desenvolvimento</td>
+                <td>08/11/2024 09:30</td>
+                <td>Almoço</td>
+                <td><button class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#modalEditarTable"> Editar</button></td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalEditarTable" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Ponto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <form id="activityForm">
+              <div class="mb-3">
+                  <label for="activityType" class="form-label">Tipo de Atividade</label>
+                  <select class="form-select" id="activityType" required>
+                      <option selected disabled value="">Escolha...</option>
+                      <option value="trabalho">Trabalho Inicio</option>
+                      <option value="pausa">Pausa</option>
+                      <option value="almoco">Almoço</option>
+                      <option value="trabalho">Trabalho Fim</option>
+                  </select>
+              </div>
+              <div class="mb-3">
+                  <label for="startTime" class="form-label">Hora de Início</label>
+                  <input type="time" class="form-control" id="startTime" required>
+              </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

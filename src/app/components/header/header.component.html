@@ -1,0 +1,56 @@
+<header class="w-100">
+    <div>
+        <h3>Ponto Online</h3>
+    </div>
+
+    <div class="ponto">
+        <div>
+            <button class="btn btn-ponto" data-bs-toggle="modal" data-bs-target="#modalPonto">Bater Ponto</button>
+        </div>
+        <span class="divider-header"></span>
+        <div>
+            <button class="btn" style="color:#27AE60">Em Atividade</button>
+        </div>
+        <img src="https://placehold.co/40x40" alt="">
+    </div>
+</header>
+
+<!-- Modal -->
+<div class="modal fade" id="modalPonto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Iniciar Atividades</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form id="activityForm">
+                <div class="mb-3">
+                    <label for="activityType" class="form-label">Tipo de Atividade</label>
+                    <select class="form-select" id="activityType" required>
+                        <option selected disabled value="">Escolha...</option>
+                        <option value="trabalho">Trabalho Inicio</option>
+                        <option value="pausa">Pausa</option>
+                        <option value="almoco">Almoço</option>
+                        <option value="trabalho">Trabalho Fim</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="startTime" class="form-label">Hora de Início</label>
+                    <input type="time" class="form-control" id="startTime" required>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script>
+  document.getElementById('modalPonto').addEventListener('shown.bs.modal', function () {
+    document.getElementById('activityForm').reset();
+  });
+</script>
