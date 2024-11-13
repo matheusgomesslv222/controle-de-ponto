@@ -4,3 +4,13 @@ body{
     font-family: 'Inter', sans-serif;
     background-color: #7F8C8D;
 }
+
+.container-main{
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    background-color: #ECF0F1;
+    border-radius: 12px;
+    padding: 12px;
+
+}
